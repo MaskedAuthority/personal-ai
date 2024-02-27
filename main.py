@@ -13,10 +13,7 @@ import re
 from omegaconf import OmegaConf #used by Silaro
 from silero.utils import (init_jit_model, split_into_batches, read_audio, read_batch, prepare_model_input)
 
-
-local_ai = OpenAI(base_url="your llm server", api_key="not-needed")
-
-
+local_ai = OpenAI(base_url="http://localhost:1234/v1/chat/completions", api_key="not-needed")
 
 def send_to_ai(message):
     mem = [{"role": "system", "content": "You are a super rude ai bot"}]
