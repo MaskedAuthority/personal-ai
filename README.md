@@ -4,7 +4,7 @@ This is an entirely local AI bot you can talk to it and will talk back. You can 
 
 > [!NOTE]
 > To use the AI after running the below commands and ensuring you have the LMStudio API running use the voice command `computer` when chatting with the AI.
-> For example "hey computer what are large language models"
+> For example "hey computer what are large language models". And say `exit` to make it shutdown.
 
 ### How to start
 
