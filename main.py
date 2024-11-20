@@ -91,7 +91,7 @@ with Live(Spinner("dots", text="Initializing AI Interface...", style="bold purpl
     sleep(1)
 
 console.print(Panel(WELCOME_ART, expand=False, border_style="purple", title="[cyan]AI Console[/cyan]"))
-hacker_type("Welcome to the [purple bold]AI Interface[/purple bold]. You now have full control.\n", delay=0.07)
+hacker_type("Welcome to the [AI Interface. You now have full control.\n", delay=0.07)
 sleep(1)
 
 # Main Loop
