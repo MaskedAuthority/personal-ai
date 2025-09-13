@@ -1,7 +1,10 @@
 transformers
-Pillow
-requests
 torch
 opencv-python
-gTTS
+gtts
 rich
+openai-whisper
+sounddevice
+scipy
+pillow
+requests

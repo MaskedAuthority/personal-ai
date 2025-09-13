@@ -1,72 +1,59 @@
-# Athey - A Multimodal AI Chatbot
+# Athey - A Multimodal AI Assistant
 
-Athey is a friendly, inquisitive, and funny AI chatbot that uses both text and images to interact with you. It captures an image from your webcam, combines it with your text input, and generates a response that is both spoken and displayed on the screen.
-
-## How it Works
-
-The script uses the `google/gemma-3n-e4b-it` model from Hugging Face for text generation and `gTTS` for text-to-speech. It captures an image from your webcam, and you can then type a question or a comment. The model processes both the image and your text to generate a response.
+Athey is a multimodal AI assistant that uses your webcam and microphone to engage in a conversation with you. You can ask it questions, and it will respond with both text and speech. It can also see what you're showing it through your webcam and incorporate that into the conversation.
 
 ## Features
 
-- **Multimodal Interaction:**  Combines text and images for more engaging conversations.
-- **Text-to-Speech:**  Reads the AI's responses aloud.
-- **Cross-Platform:** Works on macOS, Linux, and Windows.
-- **Rich CLI:** Uses the `rich` library for a more visually appealing command-line interface.
+*   **Multimodal Interaction:** Athey can understand both text and images, allowing for a richer and more intuitive user experience.
+*   **Speech-to-Text:** Speak your questions and have them transcribed into text using OpenAI's Whisper model.
+*   **Text-to-Speech:** Athey's responses are converted into speech using Google's Text-to-Speech (gTTS) service.
+*   **Webcam Integration:** Athey can see what you're showing it through your webcam and use that information in the conversation.
+*   **Gemma-3n Language Model:** Powered by Google's Gemma-3n, a powerful and versatile language model.
 
 ## Requirements
 
-- Python 3.x
-- The following Python libraries:
-  - `transformers`
-  - `Pillow`
-  - `requests`
-  - `torch`
-  - `opencv-python`
-  - `gtts`
-  - `rich`
-  - `mpg123` (for Linux)
+*   Python 3.7+
+*   Hugging Face Token
+*   `mpg123` (for Linux) or `afplay` (for macOS) for audio playback.
 
 ## Installation
 
-1.  **Clone the repository:**
+1.  Clone the repository:
     ```bash
-    git clone https://github.com/your-username/athey.git
-    cd athey
+    git clone https://github.com/your-username/personal-ai.git
     ```
-
-2.  **Install the required libraries:**
+2.  Install the required Python libraries:
     ```bash
     pip install -r requirements.txt
     ```
-    On Linux, you may also need to install `mpg123`:
+3.  Install `mpg123` if you are on Linux:
     ```bash
     sudo apt-get install mpg123
     ```
 
-3.  **Set up your Hugging Face token:**
-    The script requires a Hugging Face token to download the model. You need to have a Hugging Face account and an access token.  Set it as an environment variable:
+## Usage
+
+1.  Make sure you have a webcam and microphone connected to your computer.
+2.  Set your Hugging Face token as an environment variable:
     ```bash
     export HF_TOKEN="your-hugging-face-token"
     ```
-    Alternatively, you can hardcode it in the `main.py` file, but this is not recommended.
-
-## Usage
-
-1.  **Run the script:**
+3.  Run the application:
     ```bash
     python main.py
     ```
+4.  Press Enter to start recording, then speak your question.
 
-2.  **Interact with Athey:**
-    - The script will open your webcam.
-    - Type your message in the terminal and press Enter.
-    - Athey will respond with text and speech.
+## Dependencies
 
-3.  **Exit the chat:**
-    - Press `Ctrl+C` or `Ctrl+D` to exit.
-
-## To-Do
-
-- [ ]  Add a graphical user interface (GUI).
-- [ ]  Allow the user to select a different model.
-- [ ]  Improve error handling.
+*   [transformers](https://pypi.org/project/transformers/)
+*   [Pillow](https://pypi.org/project/Pillow/)
+*   [requests](https://pypi.org/project/requests/)
+*   [torch](https://pypi.org/project/torch/)
+*   [opencv-python](https://pypi.org/project/opencv-python/)
+*   [gTTS](https://pypi.org/project/gTTS/)
+*   [rich](https://pypi.org/project/rich/)
+*   [openai-whisper](https://pypi.org/project/openai-whisper/)
+*   [sounddevice](https://pypi.org/project/sounddevice/)
+*   [scipy](https://pypi.org/project/scipy/)
+*   [numpy](https://pypi.org/project/numpy/)
